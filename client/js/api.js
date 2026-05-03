@@ -93,3 +93,5 @@ class API {
 }
 
 window.API = API;
+
+//need to add local path to API_BASE_URL for production build, and also need to handle CORS issues when deploying backend and frontend separately.
