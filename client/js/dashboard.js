@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('table').style.display = 'table';
 
         products.forEach(product => {
-            const isLowStock = product.quantity < 10;
+            const isLowStock = product.quantity < 5;
             const tr = document.createElement('tr');
             if (isLowStock) {
                 tr.classList.add('row-low-stock');
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const categories = new Set(products.map(p => p.category));
         totalCategoriesEl.textContent = categories.size;
         
-        const lowStock = products.filter(p => p.quantity < 10).length;
+        const lowStock = products.filter(p => p.quantity < 5).length;
         lowStockCountEl.textContent = lowStock;
     }
 
