@@ -22,7 +22,7 @@ const getProducts = async (req, res, next) => {
     
     // Filter for low stock
     if (lowStock === 'true') {
-      query.quantity = { $lt: 10 }; // Threshold for low stock
+      query.quantity = { $lt: 5 }; // Threshold for low stock
     }
 
     const products = await Product.find(query).sort({ createdAt: -1 });
